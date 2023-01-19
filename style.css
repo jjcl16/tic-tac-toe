@@ -1,0 +1,36 @@
+*{
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.body{
+  display: grid;
+  grid-template: repeat(2,10vh) 80vh / 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.game{
+  display: grid;
+  grid-template: repeat(3,20vh) / repeat(3,20vh);
+  align-items: center;
+  justify-items: center;
+  gap: 2px;
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.box {
+  display: flex;
+  width: 20vh;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0px;
+  font-size: 10vh;
+}
+
