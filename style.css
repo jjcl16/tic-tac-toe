@@ -1,26 +1,25 @@
-*{
+* {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
 }
 
-.body{
+.body {
   display: grid;
-  grid-template: repeat(2,10vh) 80vh / 100%;
+  grid-template: repeat(2, 10vh) 80vh / 100%;
   align-items: center;
   justify-items: center;
 }
 
-.game{
+.game {
   display: grid;
-  grid-template: repeat(3,20vh) / repeat(3,20vh);
+  grid-template: repeat(3, 20vh) / repeat(3, 20vh);
   align-items: center;
   justify-items: center;
   gap: 2px;
   background-color: black;
   margin: 0px;
   padding: 0px;
-
 }
 
 .box {
@@ -33,4 +32,3 @@
   padding: 0px;
   font-size: 10vh;
 }
-
