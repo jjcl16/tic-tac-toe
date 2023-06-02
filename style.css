@@ -1,5 +1,5 @@
 * {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0px;
   padding: 0px;
 }
@@ -31,4 +31,128 @@
   background-color: white;
   padding: 0px;
   font-size: 10vh;
+}
+
+
+.title{
+  font-size: 8vh;
+}
+
+.verticalLine{
+  animation: verticalLineAnimation 0.5s 0s 1 normal forwards;
+}
+
+@keyframes verticalLineAnimation{
+  from {
+    border-left: 6px solid green;
+    height: 0vh;
+    width: 0px;
+    position: relative;
+    left: -21.5%; 
+    margin-left: -3px;
+    top: 0;
+    background-color: red;
+    border-radius: 10px 10px 10px 10px;
+  }
+  to {
+    border-left: 6px solid green;
+    height: 21vh;
+    width: 0px;
+    position: relative;
+    left: -21.5%; 
+    margin-left: -3px;
+    top: 0;
+    background-color: blue;
+    border-radius: 10px 10px 10px 10px;
+  }
+}
+
+.horizontalLine{
+  animation: horizontalLineAnimation 0.5s 0s 1 normal forwards;
+}
+
+@keyframes horizontalLineAnimation{
+  from{
+    position: relative;
+    border-top: 6px solid green;
+    width: 0vh;  
+    left: -0%; 
+    margin-top: -3px;
+    top: -30%;
+    background-color: transparent;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  to{
+    position: relative;
+    border-top: 6px solid green;
+    width: 21vh;  
+    left: -0%; 
+    margin-top: -3px;
+    top: -30%;
+    background-color: transparent;
+    border-radius: 10px 10px 10px 10px;
+  }
+}
+
+
+.diagonalLine1{
+  animation: diagonalLine1Animation 0.5s 0s 1 normal forwards;
+}
+
+@keyframes diagonalLine1Animation{
+  from{
+    position: relative;
+    border-bottom: 6px solid green;
+    width: 0vh;
+    top: -81%;
+    left: 27%;
+    transform: rotate(45deg);
+    transform-origin: left;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  to{
+    position: relative;
+    border-bottom: 6px solid green;
+    width: 30vh;
+    top: -81%;
+    left: 27%;
+    transform: rotate(45deg);
+    transform-origin: left;
+    border-radius: 10px 10px 10px 10px;
+  }
+}
+
+
+.diagonalLine2{  
+  animation: diagonalLine2Animation 0.5s 0s 1 normal forwards;
+}
+
+@keyframes diagonalLine2Animation{
+  from{
+    position: relative;
+    border-bottom: 6px solid green;
+    width: 0vh;
+    top: -81%;
+    right: 27%;
+    transform: rotate(-45deg);
+    transform-origin: right;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  to{
+    position: relative;
+    border-bottom: 6px solid green;
+    width: 30vh;
+    top: -81%;
+    right: 27%;
+    transform: rotate(-45deg);
+    transform-origin: right;
+    border-radius: 10px 10px 10px 10px;
+  }
+}
+
+.boxForHorizontalLine{
+  flex-direction: column;
 }
