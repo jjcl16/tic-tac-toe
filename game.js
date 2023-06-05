@@ -15,6 +15,7 @@ const nextGameButton = document.createElement("button"); // button new game
 nextGameButton.textContent = "Next Game";
 nextGameButton.addEventListener("click", nextGame);
 nextMovePlayer.appendChild(nextGameButton);
+nextGameButton.disabled = true;
 
 for (let index = 0; index < 9; index++) {
   //create the 9 boxes, and assign the event
@@ -78,6 +79,7 @@ const gameBoard = (function () {
     gameBoard.board = [];
     gameBoard.board = new Array(9);
     howPlay.textContent = "Next Player: ✖";
+    nextGameButton.disabled = true;
     clearBoard();
   };
   const clearBoard = () => {
@@ -118,6 +120,7 @@ const gameBoard = (function () {
     } else {
       howPlay.textContent = "Next Player: 〇";
     }
+    nextGameButton.disabled = true;
   };
   const checkForWinner = () => {
     let check = false;
@@ -129,6 +132,7 @@ const gameBoard = (function () {
   };
   const howWins = (signal) => {
     howPlay.textContent = `Player ${signal} wins`;
+    nextGameButton.disabled = false;
   };
   const verticalCheck = () => {
     let verticalChecker = false;
@@ -217,7 +221,13 @@ const gameBoard = (function () {
         : false;
     return secondDiagonalLineChecker;
   };
-
+  const gameIsOverCheck = () => {
+    let gameIsOverChecker = true;
+    for (let index = 0; index < 9; index++) {
+      gameIsOverChecker &&= gameBoard.board[index] ? true : false;      
+    }
+    return gameIsOverChecker;
+  }
   return {
     whoPlaysNow,
     newGame,
@@ -227,6 +237,7 @@ const gameBoard = (function () {
     restartGame,
     nextGame,
     checkForWinner,
+    gameIsOverCheck,
     games,
     moves,
     board,
@@ -245,7 +256,7 @@ const playerX = player("✖");
 const playerO = player("〇");
 
 function somebodyPlay(e) {
-  if (!gameBoard.checkForWinner()) {
+  if (!gameBoard.checkForWinner() && !gameBoard.gameIsOverCheck()) {
     let position = e.currentTarget.position;
     if (gameBoard.whoPlaysNow() == "x") {
       playerX.play(position);
@@ -257,6 +268,9 @@ function somebodyPlay(e) {
       howPlay.textContent = "Next Player: ✖";
     }
     gameBoard.checkForWinner();
+    if (gameBoard.gameIsOverCheck()){
+      nextGameButton.disabled = false;
+    }
   } else {
     console.log("There is a Winner Already");
   }
