@@ -156,3 +156,8 @@
 .boxForHorizontalLine{
   flex-direction: column;
 }
+
+.nextMovePlayer{
+  display: flex;
+  gap: 3vw;
+}
