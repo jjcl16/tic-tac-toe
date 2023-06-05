@@ -33,22 +33,21 @@
   font-size: 10vh;
 }
 
-
-.title{
+.title {
   font-size: 8vh;
 }
 
-.verticalLine{
+.verticalLine {
   animation: verticalLineAnimation 0.5s 0s 1 normal forwards;
 }
 
-@keyframes verticalLineAnimation{
+@keyframes verticalLineAnimation {
   from {
     border-left: 6px solid green;
     height: 0vh;
     width: 0px;
     position: relative;
-    left: -21.5%; 
+    left: -21.5%;
     margin-left: -3px;
     top: 0;
     background-color: red;
@@ -59,7 +58,7 @@
     height: 21vh;
     width: 0px;
     position: relative;
-    left: -21.5%; 
+    left: -21.5%;
     margin-left: -3px;
     top: 0;
     background-color: blue;
@@ -67,27 +66,27 @@
   }
 }
 
-.horizontalLine{
+.horizontalLine {
   animation: horizontalLineAnimation 0.5s 0s 1 normal forwards;
 }
 
-@keyframes horizontalLineAnimation{
-  from{
+@keyframes horizontalLineAnimation {
+  from {
     position: relative;
     border-top: 6px solid green;
-    width: 0vh;  
-    left: -0%; 
+    width: 0vh;
+    left: -0%;
     margin-top: -3px;
     top: -30%;
     background-color: transparent;
     border-radius: 10px 10px 10px 10px;
   }
 
-  to{
+  to {
     position: relative;
     border-top: 6px solid green;
-    width: 21vh;  
-    left: -0%; 
+    width: 21vh;
+    left: -0%;
     margin-top: -3px;
     top: -30%;
     background-color: transparent;
@@ -95,13 +94,12 @@
   }
 }
 
-
-.diagonalLine1{
+.diagonalLine1 {
   animation: diagonalLine1Animation 0.5s 0s 1 normal forwards;
 }
 
-@keyframes diagonalLine1Animation{
-  from{
+@keyframes diagonalLine1Animation {
+  from {
     position: relative;
     border-bottom: 6px solid green;
     width: 0vh;
@@ -112,7 +110,7 @@
     border-radius: 10px 10px 10px 10px;
   }
 
-  to{
+  to {
     position: relative;
     border-bottom: 6px solid green;
     width: 30vh;
@@ -124,13 +122,12 @@
   }
 }
 
-
-.diagonalLine2{  
+.diagonalLine2 {
   animation: diagonalLine2Animation 0.5s 0s 1 normal forwards;
 }
 
-@keyframes diagonalLine2Animation{
-  from{
+@keyframes diagonalLine2Animation {
+  from {
     position: relative;
     border-bottom: 6px solid green;
     width: 0vh;
@@ -141,7 +138,7 @@
     border-radius: 10px 10px 10px 10px;
   }
 
-  to{
+  to {
     position: relative;
     border-bottom: 6px solid green;
     width: 30vh;
@@ -153,11 +150,11 @@
   }
 }
 
-.boxForHorizontalLine{
+.boxForHorizontalLine {
   flex-direction: column;
 }
 
-.nextMovePlayer{
+.nextMovePlayer {
   display: flex;
   gap: 3vw;
 }
